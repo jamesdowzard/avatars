@@ -1,0 +1,32 @@
+[project]
+name = "avatars"
+version = "0.1.0"
+description = "AI avatar generation pipeline - create animated talking avatars from photos"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.3.1",
+    "httpx>=0.28.1",
+    "numpy>=2.4.1",
+    "opencv-python>=4.11.0.86",
+    "pillow>=12.1.0",
+    "replicate>=1.0.7",
+    "rich>=14.2.0",
+    "scipy>=1.15.0",
+    "torch>=2.9.1",
+    "torchaudio>=2.9.1",
+    "torchvision>=0.24.1",
+]
+
+[project.scripts]
+avatars = "src.cli:cli"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

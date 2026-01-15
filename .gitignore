@@ -1,0 +1,25 @@
+# Media files - don't commit to git
+executives/*/
+data/photos/
+data/stylized/
+data/audio/
+data/output/
+
+# Model weights
+models/
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.python-version
+
+# Temp files
+*.tmp
+*.log
+.DS_Store
